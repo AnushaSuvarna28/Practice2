@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-03-08T14:34:36 IST" name="Default suite" finished-at="2023-03-08T14:34:36 IST" duration-ms="616">
+    <groups>
+    </groups>
+    <test started-at="2023-03-08T14:34:36 IST" name="Default test" finished-at="2023-03-08T14:34:36 IST" duration-ms="616">
+      <class name="AdminModule.UpdateTourTest">
+        <test-method is-config="true" signature="createSpecBuilder()[pri:0, instance:AdminModule.UpdateTourTest@2abf4075]" started-at="2023-03-08T14:34:35 IST" name="createSpecBuilder" finished-at="2023-03-08T14:34:36 IST" duration-ms="600" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createSpecBuilder -->
+        <test-method signature="updateTour()[pri:0, instance:AdminModule.UpdateTourTest@2abf4075]" started-at="2023-03-08T14:34:36 IST" name="updateTour" finished-at="2023-03-08T14:34:36 IST" duration-ms="591" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateTour -->
+      </class> <!-- AdminModule.UpdateTourTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

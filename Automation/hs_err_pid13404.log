@@ -1,0 +1,205 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1048576 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (allocation.cpp:44), pid=13404, tid=6820
+#
+# JRE version:  (18.0.2+9) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (18.0.2+9-61, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dfile.encoding=UTF-8 -XX:+ShowCodeDetailsInExceptionMessages com.section3.AlertPopup
+
+Host: Intel(R) Core(TM) i5-9300HF CPU @ 2.40GHz, 8 cores, 7G,  Windows 10 , 64 bit Build 19041 (10.0.19041.2251)
+Time: Sat Nov 26 14:30:56 2022 India Standard Time elapsed time: 0.015323 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000241d3f61a20):  JavaThread "Unknown thread" [_thread_in_vm, id=6820, stack(0x00000047cd200000,0x00000047cd300000)]
+
+Stack: [0x00000047cd200000,0x00000047cd300000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x6993ca]
+V  [jvm.dll+0x7f481d]
+V  [jvm.dll+0x7f612e]
+V  [jvm.dll+0x7f67e3]
+V  [jvm.dll+0x25cdaf]
+V  [jvm.dll+0xb31af]
+V  [jvm.dll+0x2f7e19]
+V  [jvm.dll+0x7c341b]
+V  [jvm.dll+0x38be61]
+V  [jvm.dll+0x7a2073]
+V  [jvm.dll+0x40dc3f]
+V  [jvm.dll+0x40f611]
+C  [jli.dll+0x526b]
+C  [ucrtbase.dll+0x21bb2]
+C  [KERNEL32.DLL+0x174b4]
+C  [ntdll.dll+0x526a1]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ffb8044e550, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x00000241d3f61a20 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=6820, stack(0x00000047cd200000,0x00000047cd300000)]
+
+Threads with active compile tasks:
+
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap address: 0x0000000000000000, size: 0 MB, Compressed Oops mode: 32-bit
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 0.
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0, Narrow klass range: 0x0
+
+GC Precious Log:
+ CardTable entry size: 512
+ Card Set container configuration: InlinePtr #cards 5 size 8 Array Of Cards #cards 12 size 40 Howl #buckets 4 coarsen threshold 1843 Howl Bitmap #cards 512 size 80 coarsen threshold 460 Card regions per heap region 1 cards per card region 2048
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes loaded (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Events (1 events):
+Event: 0.006 Loaded shared library C:\Program Files\Java\jdk-18.0.2\bin\java.dll
+
+
+Dynamic libraries:
+0x00007ff64a2b0000 - 0x00007ff64a2c0000 	C:\Program Files\Java\jdk-18.0.2\bin\javaw.exe
+0x00007ffbe61b0000 - 0x00007ffbe63a8000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007ffbe6050000 - 0x00007ffbe610f000 	C:\Windows\System32\KERNEL32.DLL
+0x00007ffbe3b60000 - 0x00007ffbe3e32000 	C:\Windows\System32\KERNELBASE.dll
+0x00007ffbe3900000 - 0x00007ffbe3a00000 	C:\Windows\System32\ucrtbase.dll
+0x00007ffbcc1d0000 - 0x00007ffbcc1ea000 	C:\Program Files\Java\jdk-18.0.2\bin\VCRUNTIME140.dll
+0x00007ffbce9c0000 - 0x00007ffbce9d8000 	C:\Program Files\Java\jdk-18.0.2\bin\jli.dll
+0x00007ffbe4790000 - 0x00007ffbe483e000 	C:\Windows\System32\ADVAPI32.dll
+0x00007ffbe4f00000 - 0x00007ffbe4f9e000 	C:\Windows\System32\msvcrt.dll
+0x00007ffbe4df0000 - 0x00007ffbe4e8c000 	C:\Windows\System32\sechost.dll
+0x00007ffbe5350000 - 0x00007ffbe5475000 	C:\Windows\System32\RPCRT4.dll
+0x00007ffbe5030000 - 0x00007ffbe51cd000 	C:\Windows\System32\USER32.dll
+0x00007ffbe1f90000 - 0x00007ffbe222a000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e\COMCTL32.dll
+0x00007ffbe4110000 - 0x00007ffbe4132000 	C:\Windows\System32\win32u.dll
+0x00007ffbe4d60000 - 0x00007ffbe4d8b000 	C:\Windows\System32\GDI32.dll
+0x00007ffbe3e40000 - 0x00007ffbe3f4f000 	C:\Windows\System32\gdi32full.dll
+0x00007ffbdbec0000 - 0x00007ffbdbeca000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007ffbe4070000 - 0x00007ffbe410d000 	C:\Windows\System32\msvcp_win.dll
+0x00007ffbe4560000 - 0x00007ffbe4592000 	C:\Windows\System32\IMM32.DLL
+0x00007ffbdd040000 - 0x00007ffbdd04c000 	C:\Program Files\Java\jdk-18.0.2\bin\vcruntime140_1.dll
+0x00007ffbae660000 - 0x00007ffbae6ed000 	C:\Program Files\Java\jdk-18.0.2\bin\msvcp140.dll
+0x00007ffb7f970000 - 0x00007ffb80581000 	C:\Program Files\Java\jdk-18.0.2\bin\server\jvm.dll
+0x00007ffbe5020000 - 0x00007ffbe5028000 	C:\Windows\System32\PSAPI.DLL
+0x00007ffbceff0000 - 0x00007ffbceff9000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x00007ffbe4fa0000 - 0x00007ffbe500b000 	C:\Windows\System32\WS2_32.dll
+0x00007ffbd1600000 - 0x00007ffbd1627000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007ffbe11a0000 - 0x00007ffbe11b2000 	C:\Windows\SYSTEM32\kernel.appcore.dll
+0x00007ffbceaf0000 - 0x00007ffbceafa000 	C:\Program Files\Java\jdk-18.0.2\bin\jimage.dll
+0x00007ffbe32e0000 - 0x00007ffbe34c4000 	C:\Windows\SYSTEM32\DBGHELP.DLL
+0x00007ffbe2800000 - 0x00007ffbe282c000 	C:\Windows\SYSTEM32\dbgcore.DLL
+0x00007ffbe4170000 - 0x00007ffbe41f2000 	C:\Windows\System32\bcryptPrimitives.dll
+0x00007ffbcad80000 - 0x00007ffbcada5000 	C:\Program Files\Java\jdk-18.0.2\bin\java.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Java\jdk-18.0.2\bin;C:\Windows\SYSTEM32;C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e;C:\Program Files\Java\jdk-18.0.2\bin\server
+
+VM Arguments:
+jvm_args: -Dfile.encoding=UTF-8 -XX:+ShowCodeDetailsInExceptionMessages 
+java_command: com.section3.AlertPopup
+java_class_path (initial): C:\Users\Lenovo\eclipse-workspace\Automation\bin;C:\Users\Lenovo\.p2\pool\plugins\org.testng_7.4.0.r202105021533.jar;C:\Users\Lenovo\.p2\pool\plugins\com.beust.jcommander_1.78.0.jar;C:\Users\Lenovo\.p2\pool\plugins\org.apache-extras.beanshell.bsh_2.0.0.b6.jar;C:\Users\Lenovo\.p2\pool\plugins\org.yaml.snakeyaml_1.27.0.v20201111-1638.jar;C:\Users\Lenovo\.p2\pool\plugins\org.webjars.jquery_3.5.1.jar;D:\Anchu\selenium\selenium-java-4.4.0\selenium-api-4.4.0.jar;D:\Anchu\selenium\selenium-java-4.4.0\selenium-api-4.4.0-sources.jar;D:\Anchu\selenium\selenium-java-4.4.0\selenium-chrome-driver-4.4.0.jar;D:\Anchu\selenium\selenium-java-4.4.0\selenium-chrome-driver-4.4.0-sources.jar;D:\Anchu\selenium\selenium-java-4.4.0\selenium-chromium-driver-4.4.0.jar;D:\Anchu\selenium\selenium-java-4.4.0\selenium-chromium-driver-4.4.0-sources.jar;D:\Anchu\selenium\selenium-java-4.4.0\selenium-devtools-v85-4.4.0.jar;D:\Anchu\selenium\selenium-java-4.4.0\selenium-devtools-v85-4.4.0-sources.jar;D:\Anchu\selenium\selenium-java-4.4.0\selenium-devtools-v102-4.4.0.jar;D:\Anchu\selenium\selenium-java-4.4.0\selenium-devtools-v102-4.4.0-sources.jar;D:\Anchu\selenium\selenium-java-4.4.0\selenium-devtools-v103-4.4.0.jar;D:\Anchu\selenium\selenium-java-4.4.0\selenium-devtools-v103-4.4.0-sources.jar;D:\Anchu\selenium\selenium-java-4.4.0\selenium-devtools-v104-4.4.0.jar;D:\Anchu\selenium\selenium-java-4.4.0\selenium-devtools-v104-4.4.0-sources.jar;D:\Anchu\selenium\selenium-java-4.4.0\selenium-edge-driver-4.4.0.jar;D:\Anchu\selenium\selenium-java-4.4.0\selenium-edge-driver-4.4.0-sources.jar;D:\Anchu\selenium\selenium-java-4.4.0\selenium-firefox-driver-4.4.0.jar;D:\Anchu\selenium\selenium-java-4.4.0\selenium-firefox-driver-4.4.0-sources.jar;D:\Anchu\selenium\selenium-java-4.4.0\selenium-http-4.4.0.jar;D:\Anchu\selenium\selenium-java-4.4.0\selenium-http-4.4.0-sources.jar;D:\Anchu\selenium\selenium-java-4.4.0\selenium-ie-driver-4.4.0.jar;D:\Anchu\selenium\selenium-java-4.4.0\selenium-ie-driver-4.4.0-sources.jar;D:\Anchu\selenium\selenium-java-4.4.0\selenium-java-4.4.0.jar;D:\Anchu\selenium\selenium-java-4.4.0\selenium-java-4.4.0-sources.jar;D:\Anchu\selenium\selenium-java-4.4.0\selenium-json-4.4.0.jar;D:\Anchu\selenium\selenium-java-4.4.0\selenium-json-4.4.0-sources.jar;D:\Anchu\selenium\selenium-java-4.4.0\selenium-opera-driver-4.4.0.jar;D:\Anchu\selenium\selenium-java-4.4.0\selenium-opera-driver-4.4.0-sources.jar;D:\Anchu\selenium\selenium-java-4.4.0\selenium-remote-driver-4.4.0.jar;D:\Anchu\selenium\selenium-java-4.4.0\selenium-remote-driver-4.4.0-sources.jar;D:\Anchu\selenium\selenium-java-4.4.0\selenium-safari-driver-4.4.0.jar;D:\Anchu\selenium\selenium-java-4.4.0\selenium-safari-driver-4.4.0-sources.jar;D:\Anchu\selenium\selenium-java-4.4.0\selenium-support-4.4.0.jar;D:\Anchu\selenium\selenium-java-4.4.0\selenium-support-4.4.0-sources.jar;D:\Anchu\selenium\selenium-java-4.4.0\lib\async-http-client-2.12.3.jar;D:\Anchu\selenium\selenium-java-4.4.0\lib\async-http-client-netty-utils-2.12.3.jar;D:\Anchu\selenium\selenium-java-4.4.0\lib\auto-common-1.2.1.jar;D:\Anchu\selenium\selenium-java-4.4.0\lib\auto-service-1.0.1.jar;D:\Anchu\selenium\selenium-java-4.4.0\lib\auto-service-annotations-1.0.1.jar;D:\Anchu\selenium\selenium-java-4.4.0\lib\byte-buddy-1.12.10.jar;D:\Anchu\selenium\selenium-java-4.4.0\lib\checker-qual-3.12.0.jar;D:\Anchu\selenium\selenium-java-4.4.0\lib\commons-exec-1.3.jar;D:\Anchu\selenium\selenium-java-4.4.0\lib\error_prone_annotations-2.11.0.jar;D:\Anchu\selenium\selenium-java-4.4.0\lib\failsafe-3.2.4.jar;D:\Anchu\selenium\selenium-java-4.4.0\lib\failureaccess-1.0.1.jar;D:\Anchu\selenium\selenium-java-4.4.0\lib\guava-31.1-jre.jar;D:\Anchu\selenium\selenium-java-4.4.0\lib\j2objc-annotations-1.3.jar;D:\Anchu\selenium\selenium-java-4.4.0\lib\jakarta.activation-1.2.2.jar;D:\Anchu\selenium\selenium-java-4.4.0\lib\jcommander-1.82.jar;D:\Anchu\selenium\selenium-java-4.4.0\lib\jsr305-3.0.2.jar;D:\Anchu\selenium\selenium-java-4.4.0\lib\jtoml-2.0.0.jar;D:\Anchu\selenium\selenium-java-4.4.0\lib\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;D:\Anchu\selenium\selenium-java-4.4.0\lib\netty-buffer-4.1.78.Final.jar;D:\Anchu\selenium\selenium-java-4.4.0\lib\netty-codec-4.1.78.Final.jar;D:\Anchu\selenium\selenium-java-4.4.0\lib\netty-codec-http-4.1.78.Final.jar;D:\Anchu\selenium\selenium-java-4.4.0\lib\netty-codec-socks-4.1.78.Final.jar;D:\Anchu\selenium\selenium-java-4.4.0\lib\netty-common-4.1.78.Final.jar;D:\Anchu\selenium\selenium-java-4.4.0\lib\netty-handler-4.1.78.Final.jar;D:\Anchu\selenium\selenium-java-4.4.0\lib\netty-handler-proxy-4.1.78.Final.jar;D:\Anchu\selenium\selenium-java-4.4.0\lib\netty-reactive-streams-2.0.4.jar;D:\Anchu\selenium\selenium-java-4.4.0\lib\netty-resolver-4.1.78.Final.jar;D:\Anchu\selenium\selenium-java-4.4.0\lib\netty-transport-4.1.78.Final.jar;D:\Anchu\selenium\selenium-java-4.4.0\lib\netty-transport-classes-epoll-4.1.78.Final.jar;D:\Anchu\selenium\selenium-java-4.4.0\lib\netty-transport-classes-kqueue-4.1.78.Final.jar;D:\Anchu\selenium\selenium-java-4.4.0\lib\netty-transport-native-epoll-4.1.78.Final.jar;D:\Anchu\selenium\selenium-java-4.4.0\lib\netty-transport-native-kqueue-4.1.78.Final.jar;D:\Anchu\selenium\selenium-java-4.4.0\lib\netty-transport-native-unix-common-4.1.78.Final.jar;D:\Anchu\selenium\selenium-java-4.4.0\lib\opentelemetry-api-1.16.0.jar;D:\Anchu\selenium\selenium-java-4.4.0\lib\opentelemetry-context-1.16.0.jar;D:\Anchu\selenium\selenium-java-4.4.0\lib\opentelemetry-exporter-logging-1.16.0.jar;D:\Anchu\selenium\selenium-java-4.4.0\lib\opentelemetry-sdk-1.16.0.jar;D:\Anchu\selenium\selenium-java-4.4.0\lib\opentelemetry-sdk-common-1.16.0.jar;D:\Anchu\selenium\selenium-java-4.4.0\lib\opentelemetry-sdk-extension-autoconfigure-1.16.0-alpha.jar;D:\Anchu\selenium\selenium-java-4.4.0\lib\opentelemetry-sdk-extension-autoconfigure-spi-1.16.0.jar;D:\Anchu\selenium\selenium-java-4.4.0\lib\opentelemetry-sdk-logs-1.16.0-alpha.jar;D:\Anchu\selenium\selenium-java-4.4.0\lib\opentelemetry-sdk-metrics-1.16.0.jar;D:\Anchu\selenium\selenium-java-4.4.0\lib\opentelemetry-sdk-trace-1.16.0.jar;D:\Anchu\selenium\selenium-java-4.4.0\lib\opentelemetry-semconv-1.16.0-alpha.jar;D:\Anchu\selenium\selenium-java-4.4.0\lib\reactive-streams-1.0.4.jar;D:\Anchu\selenium\selenium-java-4.4.0\lib\slf4j-api-1.7.36.jar;D:\Anchu\selenium\commons-io-2.11.0-bin\commons-io-2.11.0\commons-io-2.11.0.jar;D:\Anchu\selenium\commons-io-2.11.0-bin\commons-io-2.11.0\commons-io-2.11.0-javadoc.jar;D:\Anchu\selenium\commons-io-2.11.0-bin\commons-io-2.11.0\commons-io-2.11.0-sources.jar;D:\Anchu\selenium\commons-io-2.11.0-bin\commons-io-2.11.0\commons-io-2.11.0-tests.jar;D:\Anchu\selenium\commons-io-2.11.0-bin\commons-io-2.11.0\commons-io-2.11.0-test-sources.jar;D:\Anchu\selenium\poi-bin-5.2.3-20220909\poi-bin-5.2.3\poi-5.2.3.jar;D:\Anchu\selenium\poi-bin-5.2.3-20220909\poi-bin-5.2.3\poi-examples-5.2.3.jar;D:\Anchu\selenium\poi-bin-5.2.3-20220909\poi-bin-5.2.3\poi-excelant-5.2.3.jar;D:\Anchu\selenium\poi-bin-5.2.3-20220909\poi-bin-5.2.3\poi-javadoc-5.2.3.jar;D:\Anchu\selenium\poi-bin-5.2.3-20220909\poi-bin-5.2.3\poi-ooxml-5.2.3.jar;D:\Anchu\selenium\poi-bin-5.2.3-20220909\poi-bin-5.2.3\poi-ooxml-full-5.2.3.jar;D:\Anchu\selenium\poi-bin-5.2.3-20220909\poi-bin-5.2.3\poi-ooxml-lite-5.2.3.jar;D:\Anchu\selenium\poi-bin-5.2.3-20220909\poi-bin-5.2.3\poi-scratchpad-5.2.3.jar;D:\Anchu\selenium\poi-bin-5.2.3-20220909\poi-bin-5.2.3\ooxml-lib\commons-compress-1.21.jar;D:\Anchu\selenium\poi-bin-5.2.3-20220909\poi-bin-5.2.3\ooxml-lib\commons-logging-1.2.jar;D:\Anchu\selenium\poi-bin-5.2.3-20220909\poi-bin-5.2.3\ooxml-lib\curvesapi-1.07.jar;D:\Anchu\selenium\poi-bin-5.2.3-20220909\poi-bin-5.2.3\ooxml-lib\jakarta.activation-2.0.1.jar;D:\Anchu\selenium\poi-bin-5.2.3-20220909\poi-bin-5.2.3\ooxml-lib\jakarta.xml.bind-api-3.0.1.jar;D:\Anchu\selenium\poi-bin-5.2.3-20220909\poi-bin-5.2.3\ooxml-lib\slf4j-api-1.7.36.jar;D:\Anchu\selenium\poi-bin-5.2.3-20220909\poi-bin-5.2.3\ooxml-lib\xmlbeans-5.1.1.jar;D:\Anchu\selenium\poi-bin-5.2.3-20220909\poi-bin-5.2.3\lib\commons-codec-1.15.jar;D:\Anchu\selenium\poi-bin-5.2.3-20220909\poi-bin-5.2.3\lib\commons-collections4-4.4.jar;D:\Anchu\selenium\poi-bin-5.2.3-20220909\poi-bin-5.2.3\lib\commons-io-2.11.0.jar;D:\Anchu\selenium\poi-bin-5.2.3-20220909\poi-bin-5.2.3\lib\commons-math3-3.6.1.jar;D:\Anchu\selenium\poi-bin-5.2.3-20220909\poi-bin-5.2.3\lib\log4j-api-2.18.0.jar;D:\Anchu\selenium\poi-bin-5.2.3-20220909\poi-bin-5.2.3\lib\SparseBitSet-1.2.jar;D:\Anchu\selenium\poi-bin-5.2.3-20220909\poi-bin-5.2.3\auxiliary\batik-anim-1.14.jar;D:\Anchu\selenium\poi-bin-5.2.3-20220909\poi-bin-5.2.3\auxiliary\batik-awt-util-1.14.jar;D:\Anchu\selenium\poi-bin-5.2.3-20220909\poi-bin-5.2.3\auxiliary\batik-bridge-1.14.jar;D:\Anchu\selenium\poi-bin-5.2.3-20220909\poi-bin-5.2.3\auxiliary\batik-codec-1.14.jar;D:\Anchu\selenium\poi-bin-5.2.3-20220909\poi-bin-5.2.3\auxiliary\batik-constants-1.14.jar;D:\Anchu\selenium\poi-bin-5.2.3-20220909\poi-bin-5.2.3\auxiliary\batik-css-1.14.jar;D:\Anchu\selenium\poi-bin-5.2.3-20220909\poi-bin-5.2.3\auxiliary\batik-dom-1.14.jar;D:\Anchu\selenium\poi-bin-5.2.3-20220909\poi-bin-5.2.3\auxiliary\batik-ext-1.14.jar;D:\Anchu\selenium\poi-bin-5.2.3-20220909\poi-bin-5.2.3\auxiliary\batik-gvt-1.14.jar;D:\Anchu\selenium\poi-bin-5.2.3-20220909\poi-bin-5.2.3\auxiliary\batik-i18n-1.14.jar;D:\Anchu\selenium\poi-bin-5.2.3-20220909\poi-bin-5.2.3\auxiliary\batik-parser-1.14.jar;D:\Anchu\selenium\poi-bin-5.2.3-20220909\poi-bin-5.2.3\auxiliary\batik-script-1.14.jar;D:\Anchu\selenium\poi-bin-5.2.3-20220909\poi-bin-5.2.3\auxiliary\batik-shared-resources-1.14.jar;D:\Anchu\selenium\poi-bin-5.2.3-20220909\poi-bin-5.2.3\auxiliary\batik-svg-dom-1.14.jar;D:\Anchu\selenium\poi-bin-5.2.3-20220909\poi-bin-5.2.3\auxiliary\batik-svggen-1.14.jar;D:\Anchu\selenium\poi-bin-5.2.3-20220909\poi-bin-5.2.3\auxiliary\batik-svgrasterizer-1.14.jar;D:\Anchu\selenium\poi-bin-5.2.3-20220909\poi-bin-5.2.3\auxiliary\batik-transcoder-1.14.jar;D:\Anchu\selenium\poi-bin-5.2.3-20220909\poi-bin-5.2.3\auxiliary\batik-util-1.14.jar;D:\Anchu\selenium\poi-bin-5.2.3-20220909\poi-bin-5.2.3\auxiliary\batik-xml-1.14.jar;D:\Anchu\selenium\poi-bin-5.2.3-20220909\poi-bin-5.2.3\auxiliary\bcpkix-jdk15on-1.70.jar;D:\Anchu\selenium\poi-bin-5.2.3-20220909\poi-bin-5.2.3\auxiliary\bcprov-jdk15on-1.70.jar;D:\Anchu\selenium\poi-bin-5.2.3-20220909\poi-bin-5.2.3\auxiliary\bcutil-jdk15on-1.70.jar;D:\Anchu\selenium\poi-bin-5.2.3-20220909\poi-bin-5.2.3\auxiliary\fontbox-2.0.26.jar;D:\Anchu\selenium\poi-bin-5.2.3-20220909\poi-bin-5.2.3\auxiliary\graphics2d-0.40.jar;D:\Anchu\selenium\poi-bin-5.2.3-20220909\poi-bin-5.2.3\auxiliary\pdfbox-2.0.26.jar;D:\Anchu\selenium\poi-bin-5.2.3-20220909\poi-bin-5.2.3\auxiliary\xml-apis-1.4.01.jar;D:\Anchu\selenium\poi-bin-5.2.3-20220909\poi-bin-5.2.3\auxiliary\xml-apis-ext-1.3.04.jar;D:\Anchu\selenium\poi-bin-5.2.3-20220909\poi-bin-5.2.3\auxiliary\xmlgraphics-commons-2.6.jar;D:\Anchu\selenium\poi-bin-5.2.3-20220909\poi-bin-5.2.3\auxiliary\xmlsec-3.0.0.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 2                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 8                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 134217728                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 2124414976                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5839372                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122909434                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122909434                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool ShowCodeDetailsInExceptionMessages       = true                                   {manageable} {command line}
+   size_t SoftMaxHeapSize                          = 2124414976                             {manageable} {ergonomic}
+     bool UseCompressedClassPointers               = true                           {product lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags foldmultilines=false
+ #1: stderr all=off uptime,level,tags foldmultilines=false
+
+Environment Variables:
+PATH=C:\Program Files\Common Files\Oracle\Java\javapath;C:\oracle\product\10.2.0\db_7\bin;C:\oracle\product\10.2.0\db_1\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Users\Lenovo\AppData\Local\Microsoft\WindowsApps;
+USERNAME=Lenovo
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 158 Stepping 13, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 10 , 64 bit Build 19041 (10.0.19041.2251)
+OS uptime: 0 days 4:04 hours
+
+CPU: total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 158 stepping 13 microcode 0xec, cx8, cmov, fxsr, ht, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, erms, clmul, bmi1, bmi2, adx, fma, vzeroupper, clflush, clflushopt
+
+Memory: 4k page, system-wide physical 8103M (1375M free)
+TotalPageFile size 10011M (AvailPageFile size 6M)
+current process WorkingSet (physical memory assigned to process): 9M, peak: 9M
+current process commit charge ("private bytes"): 13M, peak: 14M
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (18.0.2+9-61) for windows-amd64 JRE (18.0.2+9-61), built on Jun  7 2022 13:09:01 by "mach5one" with MS VC++ 16.8 / 16.9 (VS2019)
+
+END.
